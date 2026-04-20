@@ -1,2 +1,25 @@
 <p>click-events works!</p>
-<button class="btn" name="LoginBtn" (click)="handleEvent($event)">Click me!</button>
+<button class="btn" name="LoginBtn" (click)="handleEvent($event)">Click me!</button> 
+
+<div class="mouseenter"
+(mouseenter)="handleEvent($event)"
+style="background-color: rgb(128, 0, 0); width: 200px; height: 200px; margin-top: 50px;">
+
+</div>
+
+<div 
+class="mouseleave"
+(mouseleave)="handleEvent($event)"
+style="background-color: green; width: 200px; height: 200px;">
+
+</div>
+
+
+
+<input type="text" name="user"
+
+(focus)="handleEvent($event)"
+(input)="inputEvent($event)"
+(blur)="handleEvent($event)"
+style="margin-top: 50px;"
+>

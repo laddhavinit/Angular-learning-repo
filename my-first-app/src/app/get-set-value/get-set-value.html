@@ -1,0 +1,15 @@
+<h1>Get & Set Value</h1>
+<h2>Username: {{displayName}}</h2>
+<input type="text" 
+placeholder="Enter User name"
+(input)="GetName($event)"
+value="{{name}}"
+>
+
+<button 
+(click)="ShowName()"
+>Get Value</button>
+
+<button 
+(click)="SetName()"
+>Set Value</button>

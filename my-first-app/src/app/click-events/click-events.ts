@@ -9,7 +9,12 @@ import { Component } from '@angular/core';
 export class ClickEvents {
   handleEvent(event:any){
     console.log("Funciton called type: ",event.type)
-    console.log("Funciton class: ",event.target.class)
-
+    console.log("Funciton class: ",event.target)
+    
+  }
+  inputEvent(event:any){
+    console.log("Funciton called type: ",event.type)
+    console.log("Value: ",(event.target as HTMLInputElement).value);
+    
   }
 }
