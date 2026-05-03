@@ -1,0 +1,20 @@
+<h1>Switch Case Conditions</h1>
+<button (click)="handleColor('red')">Red</button>
+<button (click)="handleColor('yellow')">Yellow</button>
+<button (click)="handleColor('purple')">Purple</button>
+<button (click)="handleColor('gold')">Gold</button>
+
+@switch(color){
+    @case('red'){
+        <div style="height: 100px; width: 200px; background-color: red;"></div>
+    }
+    @case('yellow'){
+        <div style="height: 100px; width: 200px; background-color: yellow;"></div>
+    }
+    @case('purple'){
+        <div style="height: 100px; width: 200px; background-color: purple;"></div>
+    }
+    @default{
+        <div style="height: 100px; width: 200px; background-color: black; color: white;">No Color Match!</div>
+    }
+}
