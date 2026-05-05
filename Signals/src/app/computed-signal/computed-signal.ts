@@ -21,15 +21,13 @@ export class ComputedSignal {
   // }
 
 
-  // x=signal(10)
-  // y=signal(25)
-  // z=computed(()=>this.x()+this.y())
+  x=signal(10)
+  y=signal(25)
+  z=computed(()=>this.x()+this.y()) //We can't update this value directly, computed signals are not editable
 
-  // showVal(){
-  //   console.log(this.z());
-  //   this.x.set(40)
-  //   console.log(this.z());
-  // }
-
-
+  showVal(){
+    console.log(this.z());
+    this.x.set(40)
+    console.log(this.z());
+  }
 }

@@ -1,0 +1,15 @@
+<!-- <p>for-loops works!</p> -->
+<!-- @for(user of users; track users){
+    <h2>{{user}}</h2>
+} -->
+
+<hr>
+
+@for(emp of employees; track emp; ){
+    <h2>
+        <span>{{emp.name}}</span>
+        <span>{{emp.age}}</span>
+        <span>{{emp.email}}</span>
+        <button (click)="getName(emp.name)">Get Name</button>
+    </h2>
+}
