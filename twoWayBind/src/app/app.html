@@ -1,0 +1,6 @@
+<h1>Two Way Binding</h1>
+
+<!-- <input [(ngModel)]="name" type="text"> -->
+
+<input type="text" (input)="changeVal($event)">
+<h2>{{name}}</h2>
