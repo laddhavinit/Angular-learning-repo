@@ -1,0 +1,14 @@
+<h1>Passing Data from Parent to child</h1>
+
+<!-- <app-child [Name]="username()"></app-child> -->
+<!-- <h2>{{username}}</h2> -->
+
+<input type="text" (input)="newUser.set($event.target.value)">
+<button (click)="addNewUser()">Add User</button>
+@for(user of arr(); track user){
+  <app-child [Name]="user"></app-child>
+
+}
+
+
+<h1>Passing Data from Child to Parent</h1>
