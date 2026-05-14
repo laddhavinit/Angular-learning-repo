@@ -1,0 +1,12 @@
+<h1>Directives In angular</h1>
+Hii
+<div>
+  <ul *ngFor="let user of users()"> 
+    <li>{{user}}</li>
+  </ul>
+</div>
+
+
+<div *ngIf='show'>Logged Out</div>
+<button (click)="toggle()" *ngIf='show'>Login</button>
+<button (click)="toggle()" *ngIf='!show'>Logout</button>
