@@ -1,0 +1,13 @@
+nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+nav ul{
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    padding: 10px;
+}
+

@@ -10,10 +10,24 @@ import { Child } from './child/child';
 })
 export class App {
   protected readonly title = signal('PassingData');
-  username="VinitLaddha"
+  // username="VinitLaddha"
   arr=signal(["Vinit", "Sam" , "Raj"])
   newUser=signal('')
+  
+  
   addNewUser(){
     this.arr.update((users)=>[...users, this.newUser()]);
+  }
+  
+  
+  selectedUsername=signal('')
+  selectedUser(name:string){
+    // console.log(name)
+    this.selectedUsername.set(name)
+  }
+  
+  deleteUser(name:string){
+    console.log(name)
+    this.arr.update((data)=>data.filter((item)=>item!=name))
   }
 }

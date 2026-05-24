@@ -5,10 +5,14 @@
 
 <input type="text" (input)="newUser.set($event.target.value)">
 <button (click)="addNewUser()">Add User</button>
-@for(user of arr(); track user){
-  <app-child [Name]="user"></app-child>
+<!-- @for(user of arr(); track user){
+  <app-child [Name]="user" ></app-child>
 
-}
-
+} -->
 
 <h1>Passing Data from Child to Parent</h1>
+<h2>Selected user: {{selectedUsername()}}</h2>
+@for(user of arr(); track user){
+  <app-child [Name]="user" (selectedUser)="selectedUser($event)" (deleteUser)="deleteUser($event)" ></app-child>
+
+}
