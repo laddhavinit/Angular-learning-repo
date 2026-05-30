@@ -1,2 +1,13 @@
 <!-- <p>home works!</p> -->
 <h2>Home Component</h2>
+<a routerLink="/profile"
+[queryParams]="{id:userData().id, name:userData().name, age:userData().age}"
+>Go to Profile 1</a>
+
+<br>
+<a routerLink="/profile"
+[queryParams]="{id:2, name:'Raj', age:12}"
+>Go to Profile 2</a>
+
+<br>
+<button (click)="goToProfile()" >Go To Profile 3</button>
